@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" class="lenis lenis-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0a0a0a" />
+    <meta
+      name="description"
+      content="Adveria - Brand Strategy, UX/UI Design & Growth Services"
+    />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <title>Adveria — Brand & Digital Experience Agency for Growth-Stage Companies</title>
+    
+    <!-- Preconnect to font + image CDNs -->
+    <link rel="preconnect" href="https://framerusercontent.com" crossorigin="" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://res.cloudinary.com" crossorigin="" />
+    
+    <!-- Preload the two custom fonts the entire site uses (above-the-fold) -->
+    <link rel="preload" as="font" type="font/woff2" crossorigin="" href="https://framerusercontent.com/assets/2ePx9C44uWqd5FuND0W8jPcBvgU.woff2" />
+    <link rel="preload" as="font" type="font/woff2" crossorigin="" href="https://framerusercontent.com/assets/qG6STcJBQgabfGPrRwrTSnECve8.woff2" />
+    <link rel="preload" as="font" type="font/woff2" crossorigin="" href="/fonts/ABCGravity-XCompressed.woff2" />
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    
+    <!-- Lenis for smooth scrolling -->
+    <script defer="" src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+    <script>
+      // Wait for Lenis to load (deferred above), then init smooth scroll without blocking render
+      window.addEventListener('load', function () {
+        if (typeof Lenis !== 'function') return;
+        window.lenis = new Lenis({
+          duration: 1.4,
+          easing: function (t) { return Math.min(1, 1.001 - Math.pow(2, -10 * t)); },
+          smooth: true,
+        });
+        function raf(time) {
+          window.lenis.raf(time);
+          requestAnimationFrame(raf);
+        }
+        requestAnimationFrame(raf);
+      });
+    </script>
+  </body>
+</html>
