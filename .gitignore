@@ -1,10 +1,9 @@
 # Dependencies
 node_modules/
-client/node_modules/
 server/node_modules/
 
 # Production builds
-client/build/
+build/
 server/dist/
 
 # Environment variables
