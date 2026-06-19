@@ -35,10 +35,10 @@ function Footer() {
           <p className="footer-text">hello@adveria.com</p>
           <p className="footer-text">+1 415 555 0123</p>
           <div className="footer-social">
-            <a href="#" className="footer-social-link">X</a>
-            <a href="#" className="footer-social-link">Linkedin</a>
-            <a href="#" className="footer-social-link">Facebook</a>
-            <a href="#" className="footer-social-link">Instagram</a>
+            <span className="footer-social-link cursor-pointer">X</span>
+            <span className="footer-social-link cursor-pointer">Linkedin</span>
+            <span className="footer-social-link cursor-pointer">Facebook</span>
+            <span className="footer-social-link cursor-pointer">Instagram</span>
           </div>
         </div>
       </div>
